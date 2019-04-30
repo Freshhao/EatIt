@@ -8,7 +8,7 @@ const uSchema = new Schema(
     }],
     user: { type: Schema.Types.ObjectId, ref: "users" },
     totalPrice: Number,
-    status: { type: Number, default: 0 } //0 下单 1支付 2取消
+    status: { type: Number, default: 0 } 
   },
   {
     versionKey: false,
