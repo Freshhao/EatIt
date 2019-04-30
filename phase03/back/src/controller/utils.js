@@ -7,7 +7,7 @@ Date.prototype.Format = function(fmt) {
     "m+": this.getMinutes(),
     "s+": this.getSeconds(),
     "q+": Math.floor((this.getMonth() + 3) / 3),
-    S: this.getMilliseconds() // 毫秒
+    S: this.getMilliseconds() 
   };
   if (/(y+)/.test(fmt)) {
     fmt = fmt.replace(
