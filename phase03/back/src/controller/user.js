@@ -124,7 +124,7 @@ module.exports = class UsersController {
     let file = ctx.req.file;
     if (!file) {
       ctx.status = 422;
-      return (ctx.body = { error_msg: "缺少文件参数." });
+      return (ctx.body = { error_msg: "Missing File." });
     }
     try {
       ctx.status = 200;
