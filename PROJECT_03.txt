@@ -10,7 +10,7 @@
 # Project Description
 Our project intends to provide customers a platform where they can view and order food directedly,
 and also a platform where the seller can manage what foods they are selling and also the infomation
-(price, availability, newly added or not) about them.
+(price, category, description, photo) about them.
 
 Our website identifies the seller and customers by their login account. There is only one default
 seller. Customers can register through register button.(Default seller account is 123456, password
