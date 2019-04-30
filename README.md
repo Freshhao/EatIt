@@ -1,5 +1,4 @@
-# EatIt
-# Project 03 Submission (Final)
+# EatIt * Project 03 Submission (Final)
 
 # Team Members
 1. Yijuan Zhi, yzhi@umass.edu
