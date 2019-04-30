@@ -2,11 +2,11 @@ const Router = require("koa-router");
 const multer = require('koa-multer')
 const path = require('path')
 const storage = multer.diskStorage({
-  //文件保存路径
+  
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, '../uploads/'))
   },
-  //修改文件名称
+ 
   filename: function (req, file, cb) {
     var fileFormat = (file.originalname).split(".");
     cb(null, Date.now() + "." + fileFormat[fileFormat.length - 1]);
@@ -21,12 +21,12 @@ module.exports = function () {
   const users = new UsersController();
   const login = new LoginController();
   app.post('/upload', upload.single('file'), users.uploadImage)
-  // 登录校验
+  // login
   app.post("/api/login", login.login);
   app.post("/api/loginOut", login.loginOut);
   app.get("/api/login/checkcode", login.checkcode.bind(login));
 
-  //用户
+  //user
   app.post("/api/users/update", users.update);
   app.post("/api/users/remove", users.removeAll);
   app.post("/api/users/create", users.create);
@@ -42,7 +42,7 @@ module.exports = function () {
   initData()
   return app;
 };
-//初始化用户数据
+//init
 async function initData() {
   const count = await User.count()
   console.log(count)
